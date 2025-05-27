@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-@theme {
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
   --color-black: #000;
   --color-black-100: #000319;
   --color-black-200: rgba(17, 25, 40, 0.75);
