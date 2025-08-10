@@ -13,6 +13,7 @@
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@sentry/nextjs": "^9.22.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
     "motion": "^12.6.3",
     "next": "15.2.4",
     "react": "^19.0.0",
