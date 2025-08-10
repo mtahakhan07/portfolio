@@ -39,6 +39,21 @@
 }
 
 @layer utilities {
+
+  /* Premium heading styles */
+  .heading {
+    @apply text-center font-extrabold tracking-tight leading-tight text-white mx-auto;
+    @apply text-3xl md:text-5xl lg:text-6xl;
+    text-shadow: 0 2px 16px rgba(203, 172, 249, 0.12);
+  }
+
+  .heading-accent {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(90deg, #CBACF9 0%, #60A5FA 50%, #22D3EE 100%);
+  }
+
+  /* Note: avoid custom-media to keep PostCSS config simple */
+
   @keyframes accordion-down {
     from {
       height: 0
