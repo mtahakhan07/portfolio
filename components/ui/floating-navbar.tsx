@@ -58,17 +58,14 @@ export const FloatingNav = ({
                     duration: 0.2,
                 }}
                 className={cn(
-                    // change rounded-full to rounded-lg
-                    // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
-                    // change  pr-2 pl-8 py-2 to px-10 py-5
-                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-6 inset-x-0 mx-auto px-8 py-4 rounded-2xl border border-white/10 shadow-2xl items-center justify-center space-x-6",
                     className
                 )}
                 style={{
-                    backdropFilter: "blur(16px) saturate(180%)",
-                    backgroundColor: "rgba(17, 25, 40, 0.75)",
-                    borderRadius: "12px",
-                    border: "1px solid rgba(255, 255, 255, 0.125)",
+                    backdropFilter: "blur(32px) saturate(200%)",
+                    backgroundColor: "rgba(4, 7, 29, 0.8)",
+                    border: "1px solid rgba(203, 172, 249, 0.2)",
+                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
                 }}
             >
                 {navItems.map((navItem: any, idx: number) => (
@@ -76,13 +73,11 @@ export const FloatingNav = ({
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
-                            "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                            "relative text-white/80 hover:text-white items-center flex space-x-1 transition-all duration-300 px-4 py-2 rounded-xl hover:bg-white/5 font-medium"
                         )}
                     >
                         <span className="block sm:hidden">{navItem.icon}</span>
-                        {/* add !cursor-pointer */}
-                        {/* remove hidden sm:block for the mobile responsive */}
-                        <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+                        <span className="text-sm !cursor-pointer">{navItem.name}</span>
                     </Link>
                 ))}
                 {/* remove this login btn */}

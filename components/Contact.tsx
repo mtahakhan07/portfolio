@@ -21,9 +21,10 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = async (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus("idle");
 
         try {
             const response = await fetch('/api/contact', {
@@ -130,13 +131,15 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                <MagicButton
-                                    title={isSubmitting ? "Sending..." : "Send Message"}
-                                    icon={<FaLocationArrow />}
-                                    position="right"
-                                    otherClasses="w-full !px-8 !py-4"
-                                    handleClick={() => { }}
-                                />
+                                <div className="w-full">
+                                    <MagicButton
+                                        title={isSubmitting ? "Sending..." : "Send Message"}
+                                        icon={<FaLocationArrow />}
+                                        position="right"
+                                        otherClasses="w-full !px-8 !py-4"
+                                        handleClick={handleSubmit}
+                                    />
+                                </div>
 
                                 {submitStatus === "success" && (
                                     <motion.p
@@ -176,13 +179,13 @@ const Contact = () => {
                                     <div className="w-8 h-8 rounded-full bg-purple/20 flex items-center justify-center">
                                         <span className="text-purple text-sm">📧</span>
                                     </div>
-                                    <span className="text-white-200">mtkhan@example.com</span>
+                                    <span className="text-white-200">mtaha.khan2004@gmail.com</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
                                         <span className="text-blue-400 text-sm">📱</span>
                                     </div>
-                                    <span className="text-white-200">+1 (555) 123-4567</span>
+                                    <span className="text-white-200">+923015177988</span>
                                 </div>
                             </div>
                         </div>

@@ -8,12 +8,12 @@ const Footer = () => {
     const socialLinks = [
         {
             icon: <FaGithub />,
-            href: "https://github.com/mtkhan",
+            href: "https://github.com/mtahakhan07",
             label: "GitHub"
         },
         {
             icon: <FaLinkedin />,
-            href: "https://linkedin.com/in/mtkhan",
+            href: "https://www.linkedin.com/in/muhammad-taha-khan-734a0b236/",
             label: "LinkedIn"
         },
         {
@@ -34,7 +34,7 @@ const Footer = () => {
         <footer className="w-full pt-20 pb-10 relative">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black-100 via-black-100/90 to-transparent pointer-events-none" />
-            
+
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -50,7 +50,7 @@ const Footer = () => {
                             Muhammad Taha Khan
                         </h3>
                         <p className="text-white-200 mb-6 max-w-md leading-relaxed">
-                            Full Stack Developer and GenAI Engineer passionate about creating 
+                            Full Stack Developer and GenAI Engineer passionate about creating
                             innovative solutions that drive business growth and user satisfaction.
                         </p>
                         <MagicButton
@@ -58,8 +58,8 @@ const Footer = () => {
                             icon={<FaLocationArrow />}
                             position="right"
                             handleClick={() => {
-                                document.getElementById('contact')?.scrollIntoView({ 
-                                    behavior: 'smooth' 
+                                document.getElementById('contact')?.scrollIntoView({
+                                    behavior: 'smooth'
                                 });
                             }}
                         />
@@ -113,8 +113,8 @@ const Footer = () => {
                                 ))}
                             </div>
                             <div className="text-white-200 text-sm">
-                                <p>mtkhan@example.com</p>
-                                <p className="mt-1">+1 (555) 123-4567</p>
+                                <p>mtaha.khan2004@gmail.com</p>
+                                <p className="mt-1">+923015177988</p>
                             </div>
                         </div>
                     </motion.div>
@@ -140,7 +140,7 @@ const Footer = () => {
                     <div className="text-white-200 text-sm text-center md:text-left">
                         <p>&copy; 2024 Muhammad Taha Khan. All rights reserved.</p>
                     </div>
-                    
+
                     <div className="flex items-center gap-6 text-white-200 text-sm">
                         <motion.a
                             href="/privacy"

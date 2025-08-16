@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
-import { SiTypescript, SiExpress, SiNuxtdotjs, SiGraphql } from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiExpress, SiGraphql, SiNextdotjs } from "react-icons/si";
 
 import { cn } from "@/lib/utils";
 
@@ -54,14 +54,14 @@ export const BentoGridItem = ({
     // Replace text lists with icon components
     const leftIcons = [
         { icon: <FaReact className="w-full h-full" />, name: "React" },
-        { icon: <SiExpress className="w-full h-full" />, name: "Express" },
+        { icon: <SiNextdotjs className="w-full h-full" />, name: "Next.js" },
         { icon: <SiTypescript className="w-full h-full" />, name: "TypeScript" }
     ];
 
     const rightIcons = [
-        { icon: <FaVuejs className="w-full h-full" />, name: "Vue.js" },
-        { icon: <SiNuxtdotjs className="w-full h-full" />, name: "Nuxt.js" },
-        { icon: <SiGraphql className="w-full h-full" />, name: "GraphQL" }
+        { icon: <SiGraphql className="w-full h-full" />, name: "GraphQL" },
+        { icon: <FaNodeJs className="w-full h-full" />, name: "Node.js" },
+        { icon: <div className="w-full h-full bg-green-600 rounded flex items-center justify-center text-white text-xs font-bold">M</div>, name: "MongoDB" }
     ];
 
     const [copied, setCopied] = useState(false);
@@ -76,7 +76,7 @@ export const BentoGridItem = ({
     };
 
     const handleCopy = () => {
-        const text = "hsu@jsmastery.pro";
+        const text = "mtaha.khan2004@gmail.com";
         navigator.clipboard.writeText(text);
         setCopied(true);
     };
@@ -97,16 +97,37 @@ export const BentoGridItem = ({
             }}
         >
             {/* add img divs */}
-            <div className={`${id === 6 && "flex justify-center"} h-full`}>
+            <div className={`${id === 6 && "flex justify-center"} h-full relative overflow-hidden`}>
+                {/* Background Image */}
                 <div className="w-full h-full absolute">
                     {img && (
                         <img
                             src={img}
                             alt={img}
-                            className={cn(imgClassName, "object-cover object-center ")}
+                            className={cn(imgClassName, "object-cover object-center opacity-60")}
                         />
                     )}
+                    {/* Add default background for cards without images */}
+                    {!img && id !== 2 && id !== 6 && (
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple/10 via-blue-500/5 to-cyan-500/10" />
+                    )}
                 </div>
+
+                {/* Decorative Elements */}
+                {id === 1 && (
+                    <div className="absolute inset-0">
+                        <div className="absolute top-10 right-10 w-20 h-20 border border-purple/20 rounded-full animate-pulse" />
+                        <div className="absolute bottom-10 left-10 w-16 h-16 border border-blue-500/20 rounded-full animate-pulse delay-1000" />
+                    </div>
+                )}
+
+                {id === 4 && (
+                    <div className="absolute inset-0">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-purple/10 to-transparent rounded-full" />
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full" />
+                    </div>
+                )}
+
                 <div
                     className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
                         } `}
@@ -115,7 +136,6 @@ export const BentoGridItem = ({
                         <img
                             src={spareImg}
                             alt={spareImg}
-                            //   width={220}
                             className="object-cover object-center w-full h-full"
                         />
                     )}
@@ -159,7 +179,7 @@ export const BentoGridItem = ({
                             {leftIcons.map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-[#10132E] p-3 hover:bg-[#1a1f47] transition-colors"
+                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-black-100/80 border border-white/10 p-3 hover:bg-black-100 transition-colors"
                                     title={item.name}
                                 >
                                     <div className="text-white h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10">
@@ -172,7 +192,7 @@ export const BentoGridItem = ({
                             {rightIcons.map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-[#10132E] p-3 hover:bg-[#1a1f47] transition-colors"
+                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-black-100/80 border border-white/10 p-3 hover:bg-black-100 transition-colors"
                                     title={item.name}
                                 >
                                     <div className="text-white h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10">

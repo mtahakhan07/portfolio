@@ -29,17 +29,30 @@ const Experience = () => {
                         // remove bg-white dark:bg-slate-900
                         className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
                     >
-                        <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-                            <img
-                                src={card.thumbnail}
-                                alt={card.thumbnail}
-                                className="lg:w-32 md:w-20 w-16"
-                            />
-                            <div className="lg:ms-5">
-                                <h1 className="text-start text-xl md:text-2xl font-bold">
-                                    {card.title}
-                                </h1>
-                                <p className="text-start text-white-100 mt-3 font-semibold">
+                        <div className="flex lg:flex-row flex-col lg:items-start p-4 py-6 md:p-6 lg:p-8 gap-4">
+                            <div className="flex-shrink-0">
+                                <img
+                                    src={card.thumbnail}
+                                    alt={card.thumbnail}
+                                    className="lg:w-24 md:w-20 w-16 rounded-lg"
+                                />
+                            </div>
+                            <div className="flex-1 lg:ms-4">
+                                <div className="mb-3">
+                                    <h2 className="text-start text-lg md:text-xl lg:text-2xl font-bold text-white mb-1">
+                                        {card.title}
+                                    </h2>
+                                    <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-3 mb-2 text-start">
+                                        <span className="text-purple font-semibold text-sm md:text-base text-start">
+                                            {card.company}
+                                        </span>
+                                        <span className="hidden sm:block text-white-200 self-start">•</span>
+                                        <span className="text-white-200 text-xs md:text-sm font-medium text-start">
+                                            {card.duration}
+                                        </span>
+                                    </div>
+                                </div>
+                                <p className="text-start text-white-100 text-sm md:text-base leading-relaxed">
                                     {card.desc}
                                 </p>
                             </div>

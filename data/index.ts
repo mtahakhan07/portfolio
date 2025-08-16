@@ -18,7 +18,7 @@ export const gridItems = [
     },
     {
         id: 2,
-        title: "I'm very flexible with time zone communications",
+        title: "Flexible with time zone communications",
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-2",
         imgClassName: "",
@@ -38,7 +38,7 @@ export const gridItems = [
     },
     {
         id: 4,
-        title: "Tech enthusiast with a passion for development.",
+        title: "Passionate innovator crafting next-generation digital experiences with cutting-edge technology.",
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-1",
         imgClassName: "",
@@ -49,7 +49,7 @@ export const gridItems = [
 
     {
         id: 5,
-        title: "Currently building a JS Animation library",
+        title: "Currently building an AI Powered powerful CRM system",
         description: "The Inside Scoop",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -107,95 +107,91 @@ export const projects = [
 export const testimonials = [
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
+            "Muhammad Taha Khan delivered an exceptional web application that exceeded our expectations. His expertise in full-stack development and AI integration transformed our business processes. The attention to detail and innovative solutions he provided were remarkable. I highly recommend Taha for any complex development project.",
+        name: "James Wilson",
+        title: "CEO of TechVision Ltd, London, UK",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
+            "Working with Taha was a game-changer for our startup. His ability to understand our requirements and deliver a scalable solution using modern technologies like Next.js and MongoDB was impressive. The project was completed on time and within budget. Truly professional work!",
+        name: "Ahmed Hassan",
+        title: "Founder of InnovateHub, Karachi, Pakistan",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
+            "Taha's expertise in generative AI and web development helped us build a cutting-edge CRM system. His technical skills combined with excellent communication made the entire development process smooth. The final product has significantly improved our business efficiency.",
+        name: "Fatima Ali",
+        title: "Operations Director at TechSolutions, Lahore, Pakistan",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
+            "Muhammad Taha Khan is an exceptional developer who brings creativity and technical excellence to every project. His work on our e-commerce platform using React and Node.js was outstanding. The user experience and performance improvements were beyond our expectations.",
+        name: "Usman Malik",
+        title: "CTO of DigitalCommerce, Islamabad, Pakistan",
     },
 ];
 
 export const companies = [
     {
         id: 1,
-        name: "cloudinary",
-        img: "/cloud.svg",
-        nameImg: "/cloudName.svg",
+        name: "React.js",
+        img: "/re.svg",
+        nameImg: "",
     },
     {
         id: 2,
-        name: "appwrite",
-        img: "/app.svg",
-        nameImg: "/appName.svg",
+        name: "Three.js",
+        img: "/three.svg",
+        nameImg: "",
     },
     {
         id: 3,
-        name: "HOSTINGER",
-        img: "/host.svg",
-        nameImg: "/hostName.svg",
+        name: "Next.js",
+        img: "/next.svg",
+        nameImg: "",
     },
     {
         id: 4,
-        name: "stream",
-        img: "/s.svg",
-        nameImg: "/streamName.svg",
-    },
-    {
-        id: 5,
-        name: "docker.",
-        img: "/dock.svg",
-        nameImg: "/dockerName.svg",
+        name: "Typescript",
+        img: "/ts.svg",
+        nameImg: "",
     },
 ];
 
 export const workExperience = [
     {
         id: 1,
-        title: "Frontend Engineer Intern",
-        desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+        title: "Full Stack Developer (AI and CRM Systems)",
+        company: "TDMC",
+        duration: "June 2025 - Present",
+        desc: "Leading development of AI-powered CRM systems using modern technologies and machine learning integration.",
         className: "md:col-span-2",
         thumbnail: "/exp1.svg",
     },
     {
         id: 2,
-        title: "Mobile App Dev - JSM Tech",
-        desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-        className: "md:col-span-2", // change to md:col-span-2
+        title: "Freelance Software Developer",
+        company: "Self Employed",
+        duration: "December 2023 - Present",
+        desc: "Developed web applications using MERN stack and Next.js and AI-powered chatbot applications using LangChain and LangGraph.",
+        className: "md:col-span-2",
         thumbnail: "/exp2.svg",
     },
     {
         id: 3,
-        title: "Freelance App Dev Project",
-        desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-        className: "md:col-span-2", // change to md:col-span-2
+        title: "Frontend Developer",
+        company: "SAHL",
+        duration: "November 2024 - December 2024",
+        desc: "Led frontend development with focus on user experience and modern web technologies, delivering high-quality responsive interfaces.",
+        className: "md:col-span-2",
         thumbnail: "/exp3.svg",
     },
     {
         id: 4,
-        title: "Lead Frontend Developer",
-        desc: "Developed and maintained user-facing features using modern frontend technologies.",
+        title: "MERN Stack Intern",
+        company: "WALEE Technologies",
+        duration: "June 2024 - August 2024",
+        desc: "Developed responsive web apps with backend integration and optimized performance using React, Node.js, and MongoDB.",
         className: "md:col-span-2",
         thumbnail: "/exp4.svg",
     },
