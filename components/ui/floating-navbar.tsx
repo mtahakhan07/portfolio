@@ -58,7 +58,7 @@ export const FloatingNav = ({
                     duration: 0.2,
                 }}
                 className={cn(
-                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-6 inset-x-0 mx-auto px-8 py-4 rounded-2xl border border-white/10 shadow-2xl items-center justify-center space-x-6",
+                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-6 md:top-6 inset-x-0 mx-auto px-3 md:px-8 py-2 md:py-4 rounded-xl md:rounded-2xl border border-white/10 shadow-2xl items-center justify-center space-x-2 md:space-x-6",
                     className
                 )}
                 style={{
@@ -73,11 +73,11 @@ export const FloatingNav = ({
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
-                            "relative text-white/80 hover:text-white items-center flex space-x-1 transition-all duration-300 px-4 py-2 rounded-xl hover:bg-white/5 font-medium"
+                            "relative text-white/80 hover:text-white items-center flex space-x-1 transition-all duration-300 px-2 md:px-4 py-1 md:py-2 rounded-lg md:rounded-xl hover:bg-white/5 font-medium"
                         )}
                     >
                         <span className="block sm:hidden">{navItem.icon}</span>
-                        <span className="text-sm !cursor-pointer">{navItem.name}</span>
+                        <span className="text-xs md:text-sm !cursor-pointer">{navItem.name}</span>
                     </Link>
                 ))}
                 {/* remove this login btn */}
