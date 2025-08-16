@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiExpress, SiGraphql, SiNextdotjs } from "react-icons/si";
+import { SiTypescript, SiGraphql, SiNextdotjs } from "react-icons/si";
 
 import { cn } from "@/lib/utils";
 
