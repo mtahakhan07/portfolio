@@ -2,13 +2,17 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/moving-border";
+import SectionHeading from "./SectionHeading";
 
 const Experience = () => {
     return (
-        <div className="py-20 w-full">
-            <h1 className="heading">
+        <div id="experience" className="relative z-10 py-20 w-full">
+            <SectionHeading
+                kicker="Experience"
+                description="Roles where I have built products, shipped features, and worked with AI."
+            >
                 My <span className="heading-accent">work experience</span>
-            </h1>
+            </SectionHeading>
 
             <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
                 {workExperience.map((card) => (

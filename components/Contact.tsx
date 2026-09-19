@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { BackgroundBeams } from "./ui/background-beams";
+import SectionHeading from "./SectionHeading";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -50,25 +51,18 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 relative">
+        <section id="contact" className="relative z-10 py-20">
             <div className="absolute inset-0 pointer-events-none">
                 <BackgroundBeams />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
-                <h1 className="heading">
-                    Ready to take <span className="heading-accent">your digital presence</span> to the next level?
-                </h1>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-white-100 md:text-lg text-center mt-6 max-w-2xl mx-auto"
+                <SectionHeading
+                    kicker="Contact"
+                    description="Reach out to me today and let's discuss how I can help you achieve your goals."
                 >
-                    Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
-                </motion.p>
+                    Ready to take <span className="heading-accent">your digital presence</span> to the next level?
+                </SectionHeading>
 
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start mt-16">
                     {/* Contact Form */}

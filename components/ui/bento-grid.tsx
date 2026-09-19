@@ -1,9 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiGraphql, SiNextdotjs } from "react-icons/si";
+import {
+    SiNextdotjs,
+    SiReact,
+    SiTypescript,
+    SiNodedotjs,
+    SiExpress,
+    SiMongodb,
+    SiPython,
+    SiFastapi,
+    SiOpenai,
+    SiLangchain,
+} from "react-icons/si";
 
 import { cn } from "@/lib/utils";
+import { techStack } from "@/data";
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import GridGlobe from "./grid-globe";
@@ -51,18 +62,18 @@ export const BentoGridItem = ({
     titleClassName?: string;
     spareImg?: string;
 }) => {
-    // Replace text lists with icon components
-    const leftIcons = [
-        { icon: <FaReact className="w-full h-full" />, name: "React" },
-        { icon: <SiNextdotjs className="w-full h-full" />, name: "Next.js" },
-        { icon: <SiTypescript className="w-full h-full" />, name: "TypeScript" }
-    ];
-
-    const rightIcons = [
-        { icon: <SiGraphql className="w-full h-full" />, name: "GraphQL" },
-        { icon: <FaNodeJs className="w-full h-full" />, name: "Node.js" },
-        { icon: <div className="w-full h-full bg-green-600 rounded flex items-center justify-center text-white text-xs font-bold">M</div>, name: "MongoDB" }
-    ];
+    const stackIcons: Record<string, React.ReactNode> = {
+        "Next.js": <SiNextdotjs className="w-full h-full" />,
+        React: <SiReact className="w-full h-full text-[#58C4DC]" />,
+        TypeScript: <SiTypescript className="w-full h-full text-[#3178C6]" />,
+        "Node.js": <SiNodedotjs className="w-full h-full text-[#5FA04E]" />,
+        Express: <SiExpress className="w-full h-full" />,
+        MongoDB: <SiMongodb className="w-full h-full text-[#47A248]" />,
+        Python: <SiPython className="w-full h-full text-[#3776AB]" />,
+        FastAPI: <SiFastapi className="w-full h-full text-[#009688]" />,
+        OpenAI: <SiOpenai className="w-full h-full text-white" />,
+        LangChain: <SiLangchain className="w-full h-full text-[#2DD4BF]" />,
+    };
 
     const [copied, setCopied] = useState(false);
 
@@ -154,13 +165,20 @@ export const BentoGridItem = ({
                     )}
                 >
                     {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-                    <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-white z-10">
+                    <div className={cn(
+                        "font-sans font-extralight md:text-xs lg:text-base text-sm text-white z-10",
+                        id === 3 ? "max-w-none" : "md:max-w-32"
+                    )}>
                         {description}
                     </div>
                     {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
                     {/* remove mb-2 mt-2 */}
                     <div
-                        className={`font-sans text-lg lg:text-3xl max-w-96 font-bold text-white z-20 mb-6 ${id === 2 ? "relative bg-[#04071D] bg-opacity-90 py-3 px-4 rounded-md shadow-lg" : ""}`}
+                        className={cn(
+                            "font-sans text-lg lg:text-3xl font-bold text-white z-20 mb-6",
+                            id === 3 ? "max-w-none" : "max-w-96",
+                            id === 2 && "relative bg-[#04071D] bg-opacity-90 py-3 px-4 rounded-md shadow-lg"
+                        )}
                     >
                         {title}
                     </div>
@@ -174,30 +192,19 @@ export const BentoGridItem = ({
 
                     {/* Tech stack list div - updated with icons */}
                     {id === 3 && (
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 z-10 mt-4 mx-auto w-full">
-                            {/* Left icons */}
-                            {leftIcons.map((item, i) => (
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 z-10 mt-2 w-full">
+                            {techStack.map((item) => (
                                 <div
-                                    key={i}
-                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-black-100/80 border border-white/10 p-3 hover:bg-black-100 transition-colors"
+                                    key={item.name}
+                                    className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-white/10 bg-black-100/70 px-3 py-4 hover:border-white/25 hover:bg-black-100 transition-colors"
                                     title={item.name}
                                 >
-                                    <div className="text-white h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10">
-                                        {item.icon}
+                                    <div className="text-white h-7 w-7 md:h-8 md:w-8 lg:h-9 lg:w-9">
+                                        {stackIcons[item.name]}
                                     </div>
-                                </div>
-                            ))}
-
-                            {/* Right icons */}
-                            {rightIcons.map((item, i) => (
-                                <div
-                                    key={i}
-                                    className="flex flex-col items-center justify-center aspect-square rounded-xl bg-black-100/80 border border-white/10 p-3 hover:bg-black-100 transition-colors"
-                                    title={item.name}
-                                >
-                                    <div className="text-white h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10">
-                                        {item.icon}
-                                    </div>
+                                    <span className="text-[11px] md:text-xs text-white-100 text-center leading-tight">
+                                        {item.name}
+                                    </span>
                                 </div>
                             ))}
                         </div>

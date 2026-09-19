@@ -20,7 +20,7 @@ export const gridItems = [
         id: 2,
         title: "Flexible with time zone communications",
         description: "",
-        className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+        className: "lg:col-span-2 md:col-span-3 md:row-span-4",
         imgClassName: "",
         titleClassName: "justify-start",
         img: "",
@@ -29,8 +29,8 @@ export const gridItems = [
     {
         id: 3,
         title: "My tech stack",
-        description: "I constantly try to improve",
-        className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+        description: "The stack I ship with",
+        className: "lg:col-span-5 md:col-span-6 md:row-span-2 min-h-[18rem]",
         imgClassName: "",
         titleClassName: "justify-center",
         img: "",
@@ -195,6 +195,19 @@ export const workExperience = [
         className: "md:col-span-2",
         thumbnail: "/exp4.svg",
     },
+];
+
+export const techStack = [
+    { name: "Next.js" },
+    { name: "React" },
+    { name: "TypeScript" },
+    { name: "Node.js" },
+    { name: "Express" },
+    { name: "MongoDB" },
+    { name: "Python" },
+    { name: "FastAPI" },
+    { name: "OpenAI" },
+    { name: "LangChain" },
 ];
 
 export const socialMedia = [

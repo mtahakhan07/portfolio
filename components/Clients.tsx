@@ -5,13 +5,17 @@ import React from "react";
 
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import SectionHeading from "./SectionHeading";
 
 const Clients = () => {
     return (
-        <section id="testimonials" className="py-20">
-            <h1 className="heading">
+        <section id="testimonials" className="relative z-10 py-20">
+            <SectionHeading
+                kicker="Testimonials"
+                description="What people say after we ship something together."
+            >
                 Kind words from <span className="heading-accent">satisfied clients</span>
-            </h1>
+            </SectionHeading>
 
             <div className="flex flex-col items-center max-lg:mt-10">
                 <div

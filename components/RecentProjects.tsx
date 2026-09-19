@@ -4,13 +4,17 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
+import SectionHeading from "./SectionHeading";
 
 const RecentProjects = () => {
     return (
-        <div id="projects" className="py-20">
-            <h1 className="heading">
+        <div id="projects" className="relative z-10 py-20">
+            <SectionHeading
+                kicker="Projects"
+                description="A few builds that show how I ship web apps and AI-powered products."
+            >
                 A small selection of <span className="heading-accent">recent projects</span>
-            </h1>
+            </SectionHeading>
             <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
                 {projects.map((item) => (
                     <div

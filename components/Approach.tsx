@@ -1,14 +1,20 @@
+"use client";
+
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
+import SectionHeading from "./SectionHeading";
 
 const Approach = () => {
     return (
-        <section className="w-full py-20">
-            <h1 className="heading">
+        <section id="approach" className="relative z-10 w-full py-20">
+            <SectionHeading
+                kicker="Approach"
+                description="A simple path from the first conversation to a launch you can rely on."
+            >
                 My <span className="heading-accent">approach</span>
-            </h1>
+            </SectionHeading>
             {/* remove bg-white dark:bg-black */}
             <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
                 {/* add des prop */}
