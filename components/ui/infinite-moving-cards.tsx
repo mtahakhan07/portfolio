@@ -80,32 +80,34 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-5 py-4",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[320px] sm:w-[380px] md:w-[450px] max-w-full shrink-0 rounded-3xl border border-white/10 px-7 py-8 transition-colors duration-300 hover:border-purple/30"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)",
+            }}
             key={`${item.name}-${idx}`}
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
-                {item.quote}
+            <blockquote className="relative z-20">
+              <span className="mb-4 block font-serif text-4xl leading-none text-purple/80">
+                &ldquo;
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.name}
-                  </span>
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.title}
-                  </span>
+              <p className="text-sm md:text-base leading-relaxed text-white-100">
+                {item.quote}
+              </p>
+              <div className="relative z-20 mt-6 flex flex-col gap-0.5">
+                <span className="text-sm md:text-base font-semibold text-white">
+                  {item.name}
+                </span>
+                <span className="text-xs md:text-sm text-white-200">
+                  {item.title}
                 </span>
               </div>
             </blockquote>
